@@ -1,13 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=Bebas+Neue&family=Dongle:wght@700&family=Hubballi&family=Inter:wght@900&family=Italiana&family=Kanit&family=Lato&family=League+Spartan:wght@100&family=Lobster&family=Montserrat:ital,wght@1,100&family=Oswald:wght@500&family=Pacifico&family=Roboto+Mono:wght@100&family=Roboto:wght@700&family=Rubik:wght@600&family=Russo+One&family=Train+One&family=Ubuntu:wght@300&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.links {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  color: #787a82;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1rem 0 1rem 0;
+  height: 40px;
+}
+.link0 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: #787a82;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1rem 0 1rem 0;
+  height: 40px;
+}
+.link1 {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  color: #787a82;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1rem 0 1rem 0;
+  height: 40px;
+}
+
+/*effect-underline*/
+.link1:after,
+.link0:after,
+.link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.link1:hover:after,
+.link0:hover:after,
+.link:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+@media (min-width: 320px) and (max-width: 580px) {
+  .link,
+  .link0,
+  .link1 {
+    font-size: 3vw;
+    padding-left: 10px;
+  }
+}
+@media (min-width: 581px) and (max-width: 1024px) {
+  .link,
+  .link0,
+  .link1 {
+    font-size: 3vw;
+    padding-left: 10px;
+  }
 }
